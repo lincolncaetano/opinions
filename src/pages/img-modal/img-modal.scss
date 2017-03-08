@@ -1,0 +1,17 @@
+page-img-modal {
+
+  ion-fab[bottom] {
+      bottom: 41px;
+  }
+
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+  }
+
+  .ion-modal-img{
+    background: rgba(0,0,0,0.7);
+  }
+
+}

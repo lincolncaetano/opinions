@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="color2">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Pergute ai =D</ion-title>
+    <ion-buttons end>
+       <button ion-button icon-only (click)="onNovaPostagem(postagemForm)">
+         <ion-icon name="checkmark"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+  <form #postagemForm="ngForm" novalidate>
+
+    <ion-item>
+      <ion-textarea  [(ngModel)]="postagem.pergunta" name="pergunta" type="text" #pergunta="ngModel" placeholder="Faça um Pergunta"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Privado</ion-label>
+      <ion-toggle color="color2"></ion-toggle>
+    </ion-item>
+
+    <ion-grid style="padding: 0px; margin-top: 40px;">
+      <ion-row>
+        <ion-col style="padding: 1px;" (click)="getFoto()" *ngIf="base64Image1 != null">
+          <img class="imgPer" src={{base64Image1}}>
+        </ion-col>
+        <ion-col style="padding: 1px;" (click)="getFoto()" *ngIf="base64Image2 != null">
+          <img class="imgPer" src={{base64Image2}}>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+</ion-content>

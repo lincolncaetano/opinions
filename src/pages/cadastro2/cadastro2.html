@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar color="color2">
+    <ion-title>cadastro2</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+  <form #cadastroForm="ngForm" novalidate>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50 (click)="presentActionSheet(1)">
+          <!-- <img style="border-radius: 50%;" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=111652245"> -->
+          <ion-img  class="imgPer" style="border-radius: 50%;"  [height]="imgHeight" src={{base64Image1}}></ion-img>
+        </ion-col>
+        <ion-col width-50 (click)="presentActionSheet(2)">
+          <!-- <img src="http://trendom.co/wp-content/uploads/2015/08/emma-watson-elle-magazine-cover-belgium-january-2015_3.jpg"> -->
+          <ion-img class="imgPer"  [height]="imgHeight" src={{base64Image2}}></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list style="text-align: center; margin: -1px 0 -1px 0;">
+
+
+      <ion-item>
+        <ion-input  [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="Username" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" placeholder="Password" required></ion-input>
+      </ion-item>
+
+      <button ion-button color="light" class="btn-login" outline (click)="onCadastro(cadastroForm)">
+        Avançar
+      </button>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>

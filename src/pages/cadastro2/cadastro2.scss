@@ -1,0 +1,39 @@
+page-cadastro2 {
+  .item{
+    color: white;
+    background: transparent;
+  }
+
+  .datetime{
+    padding-left: 0px;
+  }
+
+  .select{
+    padding-left: 0px;
+  }
+
+  .datetime-md{
+    margin: 13px 8px 13px 8px;
+    padding: 0px;
+  }
+
+  .select-md{
+    margin: 13px 8px 13px 8px;
+    padding: 0px;
+  }
+
+  .select-md .select-icon .select-icon-inne{
+    color: #bfbfbf;
+  }
+
+  .btn-login{
+    margin-top: 25px;
+    border-width: 1px 0px 1px 0px;
+    width: 56%;
+    border-radius: 0px;
+  }
+
+  .list-ios > .item-block:first-child {
+    border-top: 0px;
+  }
+}

@@ -1,0 +1,78 @@
+<ion-header>
+
+<ion-toolbar color="color2">
+  <ion-buttons start>
+    <button ion-button icon-only [navPush]="buscaPage">
+      <ion-icon name="search"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-title color="color1">Feed</ion-title>
+
+  <ion-buttons end>
+    <button ion-button icon-only (click)="openPostagem()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+
+</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="getstart">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let postagem of listaPostagem">
+
+    <ion-item>
+      <ion-avatar item-left (click)="openPerfil(postagem.usuario)">
+        <img src={{postagem.usuario.foto}}>
+      </ion-avatar>
+      <h2 (click)="openPerfil(postagem.usuario)">{{postagem.usuario.username}}</h2>
+      <button ion-button icon-only item-right color="transp" style="box-shadow: none;" (click)="openMaisOpcoes(postagem)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{postagem.pergunta}}</p>
+    </ion-card-content>
+
+    <ion-grid style="padding: 0px 2px 0px 2px;">
+      <ion-row>
+        <ion-col style="padding: 1px;" (click)="cadastraCurtida(postagem,1)" (press)="presentProfileModal(postagem,0)">
+          <img class="imgPer" src={{postagem.opcao1}}>
+        </ion-col>
+        <ion-col style="padding: 1px;" (click)="cadastraCurtida(postagem,2)" (press)="presentProfileModal(postagem,1)">
+          <img class="imgPer" src={{postagem.opcao2}}>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-row>
+      <ion-col style="text-align: center; padding: 0px;">
+        <button ion-button icon-left clear small color="light" (click)="cadastraCurtida(postagem,1)">
+          <ion-icon style="font-size: 2.2em;" name="ios-trophy" isActive="{{isActive(postagem,1)}}"></ion-icon>
+          <div>{{postagem.listaCurtidasOp1.length}}</div>
+        </button>
+      </ion-col>
+      <ion-col style="text-align: center; padding: 0px;">
+        <button ion-button icon-left clear small  color="light" (click)="cadastraCurtida(postagem,2)">
+          <ion-icon style="font-size: 2.2em;" name="ios-trophy" isActive="{{isActive(postagem,2)}}"></ion-icon>
+          <div>{{postagem.listaCurtidasOp2.length}}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

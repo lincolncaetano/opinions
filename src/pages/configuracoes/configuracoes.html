@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="color2">
+    <ion-title>Configurações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+  <!-- <ion-list>
+    <ion-list-header>
+      Convidar
+    </ion-list-header>
+    <button ion-item >Amigos do Facebook</button>
+  </ion-list> -->
+
+  <ion-list>
+    <ion-list-header>
+      Conta
+    </ion-list-header>
+    <button ion-item (click)="openEditarPerfil()">Editar Perfil</button>
+    <button ion-item (click)="openAlterarSenha()">Alterar Senha</button>
+    <button ion-item (click)="openUsuariosBloqueados()">Usuários Bloquedos</button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Configurações
+    </ion-list-header>
+    <button ion-item (click)="openIdioma()">Idioma</button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Suporte
+    </ion-list-header>
+    <button ion-item (click)="launch('http://ionicframework.com/docs/v2')" >Central de Ajuda</button>
+    <button ion-item>Relatar um Problema</button>
+    <button ion-item (click)="launch('http://ionicframework.com/docs/v2')">Política de Privacidade</button>
+    <button ion-item (click)="launch('http://ionicframework.com/docs/v2')">Termos</button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+    </ion-list-header>
+    <button ion-item (click)="logout()">Sair</button>
+  </ion-list>
+
+
+</ion-content>

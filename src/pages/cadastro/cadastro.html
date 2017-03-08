@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="color2">
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+  <form #cadastroForm="ngForm" novalidate>
+
+    <ion-list style="text-align: center; margin: -1px 0 -1px 0;">
+
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="Nome" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="Email" required></ion-input>
+      </ion-item>
+
+
+      <button ion-button color="light" class="btn-login" outline (click)="onCadastro(cadastroForm)">
+        Avançar
+      </button>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>

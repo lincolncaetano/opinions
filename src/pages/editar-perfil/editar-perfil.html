@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="color2">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons end>
+       <button ion-button icon-only (click)="onSalvarPerfil(usuarioForm)">
+         <ion-icon name="checkmark"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="getstart" >
+
+  <form #usuarioForm="ngForm" novalidate>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50 (click)="presentActionSheet(1)">
+          <!-- <img style="border-radius: 50%;" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=111652245"> -->
+          <img class="imgPer" style="border-radius: 50%;" *ngIf="base64Image1" src={{base64Image1}}>
+          <img class="imgPer" style="border-radius: 50%;" *ngIf="!base64Image1" src={{usuario.foto}}>
+        </ion-col>
+        <ion-col width-50 (click)="presentActionSheet(2)">
+          <!-- <img src="http://trendom.co/wp-content/uploads/2015/08/emma-watson-elle-magazine-cover-belgium-january-2015_3.jpg"> -->
+          <img class="imgPer" *ngIf="base64Image2" src={{base64Image2}}>
+          <img class="imgPer" *ngIf="!base64Image2" src={{usuario.background}}>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="Nome" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input disabled="true" [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="Username" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea style="height: 102px;" [(ngModel)]="usuario.descricao" name="descricao" type="text" #descricao="ngModel" placeholder="Sobre você"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Data de Nascimento
+      </ion-list-header>
+      <ion-item>
+        <ion-datetime  displayFormat="MM/DD/YYYY" min="1920"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Outras Informações
+      </ion-list-header>
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="Email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="usuario.telefone" name="telefone" type="text" #telefone="ngModel" placeholder="Telefone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select placeholder="Sexo" [(ngModel)]="usuario.sexo" name="sexo" type="text" #sexo="ngModel">
+          <ion-option value="masc">Masculino</ion-option>
+          <ion-option value="fem">Feminino</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+  </form>
+
+</ion-content>

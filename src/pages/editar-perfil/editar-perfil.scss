@@ -1,0 +1,33 @@
+page-editar-perfil {
+
+  .item{
+    color: white;
+    background: transparent;
+  }
+
+  .datetime{
+    padding-left: 0px;
+  }
+
+  .select{
+    padding-left: 0px;
+  }
+
+  .datetime-md{
+    margin: 13px 8px 13px 8px;
+    padding: 0px;
+  }
+
+  .select-md{
+    margin: 13px 8px 13px 8px;
+    padding: 0px;
+  }
+
+  .select-md .select-icon .select-icon-inne{
+    color: #bfbfbf;
+  }
+
+  textarea.text-input {
+    min-height: 100px;
+  }
+}

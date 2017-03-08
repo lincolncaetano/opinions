@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="color2">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Alterar Senha</ion-title>
+    <ion-buttons end>
+       <button ion-button icon-only (click)="salvarSenha(usuarioForm)">
+         <ion-icon name="checkmark"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+<form #usuarioForm="ngForm" novalidate>
+  <ion-list>
+
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" required  placeholder="Senha Antiga"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Nova Senha
+    </ion-list-header>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.novaSenha" name="novaSenha" type="password" #novaSenha="ngModel" required placeholder="Nova Senha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.confirmacao" name="confirmacao" type="password" #confirmacao="ngModel" required placeholder="Confirmação"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  </form>
+
+</ion-content>

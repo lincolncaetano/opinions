@@ -1,0 +1,28 @@
+<ion-header>
+
+<ion-toolbar color="color2">
+  <ion-buttons start>
+    <button ion-button icon-only (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content style="background-color: rgba(0,0,0,0.7);" no-bounce>
+
+  <ion-slides pager (ionSlideDidChange)="slideChanged()">
+
+    <ion-slide>
+       <img class="imgPer" src={{postagem.opcao1}}>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="imgPer" src={{postagem.opcao2}}>
+    </ion-slide>
+
+
+  </ion-slides>
+
+</ion-content>

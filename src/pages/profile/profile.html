@@ -1,0 +1,54 @@
+<ion-header>
+   <ion-navbar color="color2">
+     <ion-buttons end>
+       <button ion-button icon-only *ngIf="perfilAdmin" [navPush]="configuracoesPage">
+         <ion-icon name="settings"></ion-icon>
+       </button>
+       <button ion-button icon-only *ngIf="!perfilAdmin" (click)="openMaisOpcoes()">
+         <ion-icon name="more"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-navbar>
+</ion-header>
+
+
+<ion-content class="getstart" no-bounce [ngStyle]="{'background-image': 'url(' + usuario.background + ')'}">
+
+<div style="position: absolute; bottom: 0px; width: 100%;" padding>
+
+  <ion-fab right *ngIf="!perfilAdmin">
+    <button ion-fab color="fab" *ngIf="!isSegue()" (click)="seguirUsuario()"><ion-icon name="md-person-add"></ion-icon></button>
+    <button ion-fab color="fab" *ngIf="isSegue()" (click)="excluirSeguir()"><ion-icon name="ios-eye"></ion-icon></button>
+ </ion-fab>
+
+  <ion-grid style="color: white;">
+    <ion-row>
+      <h2 style=" color: white; margin-bottom: 0px; font-weight: bold;">{{usuario.nome}}</h2>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p style="color: white; margin: 0px 0px 10px 0px;">@{{usuario.username}}</p>
+      </ion-col>
+      <ion-col style="    text-align: right;">
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="color: white; text-align: center; font-size: 1.5rem">
+    <ion-row style="font-weight: bold;">
+      <ion-col width-33 (click)="openListaPostagem(usuario)">{{publicacoes}}</ion-col>
+      <ion-col width-33 (click)="openListaUsuario(usuario, 'seguidores')" >{{seguidores}}</ion-col>
+      <ion-col width-33 (click)="openListaUsuario(usuario, 'seguidos')">{{seguidos}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-33>publicações</ion-col>
+      <ion-col width-33>seguidores</ion-col>
+      <ion-col width-33>seguindo</ion-col>
+    </ion-row>
+  </ion-grid>
+  <p style="color: white; font-size: 1.4rem; min-height: 70px; ">
+    {{usuario.descricao}}
+  </p>
+</div>
+
+</ion-content>

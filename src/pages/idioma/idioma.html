@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="color2">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Idioma</ion-title>
+    <ion-buttons end>
+       <button ion-button icon-only>
+         <ion-icon name="checkmark"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="getstart">
+
+  <ion-list radio-group color="light">
+
+    <ion-item>
+      <ion-label>Português(Brasil)</ion-label>
+      <ion-radio checked="true" value="pt-br"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>English</ion-label>
+      <ion-radio value="en"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Español</ion-label>
+      <ion-radio value="es"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="color2">
+    <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding class="getstart">
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="openPerfil(item)">
+      <ion-avatar item-left>
+        <img src="{{ item.foto }}">
+      </ion-avatar>
+      <h2>{{ item.nome }}</h2>
+      <p>@{{ item.username }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
