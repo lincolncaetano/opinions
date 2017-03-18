@@ -5,7 +5,7 @@
         <ion-icon name="close"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Perfil</ion-title>
+    <ion-title>{{ 'PERFIL' | translate }}</ion-title>
     <ion-buttons end>
        <button ion-button icon-only (click)="onSalvarPerfil(usuarioForm)">
          <ion-icon name="checkmark"></ion-icon>
@@ -37,22 +37,22 @@
     <ion-list>
 
       <ion-item>
-        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="Nome" required></ion-input>
+        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="{{ 'NOME' | translate }}" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input disabled="true" [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="Username" required></ion-input>
+        <ion-input disabled="true" [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="{{ 'NOME USUARIO' | translate }}" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-textarea style="height: 102px;" [(ngModel)]="usuario.descricao" name="descricao" type="text" #descricao="ngModel" placeholder="Sobre você"></ion-textarea>
+        <ion-textarea style="height: 102px;" [(ngModel)]="usuario.descricao" name="descricao" type="text" #descricao="ngModel" placeholder="{{ 'SOBRE VOCE' | translate }}"></ion-textarea>
       </ion-item>
 
     </ion-list>
 
     <ion-list>
       <ion-list-header>
-        Data de Nascimento
+        {{ 'DATA NASCIMENTO' | translate }}
       </ion-list-header>
       <ion-item>
         <ion-datetime  displayFormat="MM/DD/YYYY" min="1920"></ion-datetime>
@@ -61,18 +61,18 @@
 
     <ion-list>
       <ion-list-header>
-        Outras Informações
+        {{ 'OUTRAS INFORMACOES' | translate }}
       </ion-list-header>
       <ion-item>
-        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="Email" required></ion-input>
+        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="{{ 'EMAIL' | translate }}" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input [(ngModel)]="usuario.telefone" name="telefone" type="text" #telefone="ngModel" placeholder="Telefone"></ion-input>
+        <ion-input [(ngModel)]="usuario.telefone" name="telefone" type="text" #telefone="ngModel" placeholder="{{ 'TELEFONE' | translate }}"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-select placeholder="Sexo" [(ngModel)]="usuario.sexo" name="sexo" type="text" #sexo="ngModel">
-          <ion-option value="masc">Masculino</ion-option>
-          <ion-option value="fem">Feminino</ion-option>
+        <ion-select placeholder="{{ 'SEXO' | translate }}" [(ngModel)]="usuario.sexo" name="sexo" type="text" #sexo="ngModel">
+          <ion-option value="masc">{{ 'MASCULINO' | translate }}</ion-option>
+          <ion-option value="fem">{{ 'FEMININO' | translate }}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>

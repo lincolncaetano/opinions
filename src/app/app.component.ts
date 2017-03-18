@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
+import {TranslateService} from 'ng2-translate';
 
 import { UserData } from '../providers/user-data';
 import { HomePage } from '../pages/home/home';
@@ -16,8 +17,13 @@ export class MyApp {
 
   constructor(
     platform: Platform,
-    public userData: UserData
+    public userData: UserData,
+    translate: TranslateService
   ) {
+
+    translate.setDefaultLang('pt-br');
+    let browserLang = translate.getBrowserLang();
+    //translate.use(browserLang.match(/en|es/) ? browserLang : 'es');
 
     this.userData.hasLoggedIn().then((hasSeenTutorial) => {
 

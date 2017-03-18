@@ -15,8 +15,8 @@
 	<div class="logo">
 		<h2 style="color: white; margin-top: 3.8rem; font-size: 5.4rem"> <ion-icon name="ios-eye"></ion-icon></h2>
 	</div>
-	<p color="light">Bem vindo</p>
-	<p color="light">Que tal nos dizer qual a sua opinião?</p>
+	<p color="light">{{ 'BEM_VINDO' | translate }}</p>
+	<p color="light">{{ 'MSG_HOME' | translate }}</p>
 
 
 </ion-content>
@@ -25,12 +25,12 @@
   <ion-toolbar mode="ios" >
 		<ion-buttons start>
       <button ion-button color="light" [navPush]="loginPage">
-        Entrar
+        {{ 'LOGIN' | translate }}
       </button>
     </ion-buttons>
     <ion-buttons end>
       <button ion-button color="light" [navPush]="cadastroPage">
-        Cadastre-se
+        {{ 'INSCREVER' | translate }}
       </button>
     </ion-buttons>
   </ion-toolbar>

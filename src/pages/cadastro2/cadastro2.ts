@@ -3,6 +3,8 @@ import { NavController, NavParams, ViewController, ActionSheetController } from 
 import { NgForm } from '@angular/forms';
 import { Camera } from 'ionic-native';
 
+import {TranslateService} from 'ng2-translate';
+
 import { UsuarioService } from '../../providers/usuario-service';
 import { TabsPage } from '../tabs/tabs';
 
@@ -24,7 +26,8 @@ export class Cadastro2Page {
     public navParams: NavParams,
     public viewCtrl: ViewController,
     public actionSheetCtrl: ActionSheetController,
-    public usuarioService: UsuarioService) {
+    public usuarioService: UsuarioService,
+    public translate: TranslateService) {
 
       this.usuario = navParams.get('usuario');
       console.log(this.usuario);
@@ -58,24 +61,38 @@ export class Cadastro2Page {
     }
   }
 
+  retornaMsg(msg){
+    let retorno;
+    this.translate.get(msg).subscribe(
+      value => {
+       retorno =  value;
+      }
+    )
+
+    return retorno;
+  }
+
   presentActionSheet(num) {
+
+    let tirarFoto = this.retornaMsg('TIRA FOTO');
+    let tirarBiblioteca = this.retornaMsg('USAR BIBLIOTECA');
+    let cancelar = this.retornaMsg('CANCELAR');
 
 
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
       buttons: [
         {
-          text: 'Tirar foto',
+          text: tirarFoto,
           handler: () => {
             this.getFoto(num,Camera.PictureSourceType.CAMERA);
           }
         },{
-          text: 'Usar da biblioteca',
+          text: tirarBiblioteca,
           handler: () => {
             this.getFoto(num,Camera.PictureSourceType.PHOTOLIBRARY);
           }
         },{
-          text: 'Cancel',
+          text: cancelar,
           role: 'cancel',
           handler: () => {
             this.viewCtrl.dismiss();

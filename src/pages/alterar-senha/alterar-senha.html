@@ -5,7 +5,7 @@
         <ion-icon name="close"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Alterar Senha</ion-title>
+    <ion-title>{{ 'ALTERAR SENHA' | translate }}</ion-title>
     <ion-buttons end>
        <button ion-button icon-only (click)="salvarSenha(usuarioForm)">
          <ion-icon name="checkmark"></ion-icon>
@@ -21,20 +21,20 @@
   <ion-list>
 
     <ion-item>
-      <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" required  placeholder="Senha Antiga"></ion-input>
+      <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" required  placeholder="{{ 'SENHA ANTIGA' | translate }}"></ion-input>
     </ion-item>
 
   </ion-list>
 
   <ion-list>
     <ion-list-header>
-      Nova Senha
+      {{ 'NOVA SENHA' | translate }}
     </ion-list-header>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.novaSenha" name="novaSenha" type="password" #novaSenha="ngModel" required placeholder="Nova Senha"></ion-input>
+      <ion-input [(ngModel)]="usuario.novaSenha" name="novaSenha" type="password" #novaSenha="ngModel" required placeholder="{{ 'NOVA SENHA' | translate }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.confirmacao" name="confirmacao" type="password" #confirmacao="ngModel" required placeholder="Confirmação"></ion-input>
+      <ion-input [(ngModel)]="usuario.confirmacao" name="confirmacao" type="password" #confirmacao="ngModel" required placeholder="{{ 'CONFIRMA SENHA' | translate }}"></ion-input>
     </ion-item>
   </ion-list>
 

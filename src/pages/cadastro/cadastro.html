@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="color2">
-    <ion-title>Cadastro</ion-title>
+    <ion-title>{{ 'INSCREVER' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,16 +12,16 @@
     <ion-list style="text-align: center; margin: -1px 0 -1px 0;">
 
       <ion-item>
-        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="Nome" required></ion-input>
+        <ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" placeholder="{{ 'NOME' | translate }}" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="Email" required></ion-input>
+        <ion-input [(ngModel)]="usuario.email" name="email" type="email" #email="ngModel" placeholder="{{ 'EMAIL' | translate }}" required></ion-input>
       </ion-item>
 
 
       <button ion-button color="light" class="btn-login" outline (click)="onCadastro(cadastroForm)">
-        Avançar
+        {{ 'PROXIMO' | translate }}
       </button>
 
     </ion-list>

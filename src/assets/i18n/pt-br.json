@@ -1,0 +1,54 @@
+{
+  "HELLO": "Oii",
+  "NOTIFICACOES": "Notificações",
+  "PUBLICACOES": "Publicações",
+  "SEGUIDORES": "Seguidores",
+  "SEGUINDO": "Seguindo",
+
+  "CONFIGURACOES" : "Configurações",
+  "CONTA" : "Conta",
+  "EDITAR PERFIL" : "Editar Perfil",
+  "ALTERAR SENHA" : "Alterar Senha",
+  "USUARIOS BLOQUEADO" : "Usuários Bloqueados",
+  "IDIOMA" : "Idiomas",
+  "SUPORTE" : "Suporte",
+  "CENTRAL AJUDA" : "Central de Ajuda",
+  "RELATAR PROBLEMA" : "Relatar Problema",
+  "POLITICA" : "Politica de Provacidade",
+  "TERMOS" : "Termos de uso",
+  "SAIR" : "Sair",
+
+  "PERFIL" : "Perfil",
+  "NOME" : "Nome",
+  "NOME USUARIO" : "Nome de Usuario",
+  "SOBRE VOCE" : "Sobre Você",
+  "DATA NASCIMENTO" : "Data de Nascimento",
+  "OUTRAS INFORMACOES" : "Outras Informações",
+  "EMAIL" : "Email",
+  "TELEFONE" : "Telefone",
+  "SEXO" : "Gênero",
+  "MASCULINO" : "Masculino",
+  "FEMININO" : "Feminino",
+
+  "SENHA ANTIGA" : "Senha Antiga",
+  "NOVA SENHA" : "Nova Senha",
+  "CONFIRMA SENHA" : "Confirmar Senhar",
+  "SENHA" : "Senha",
+
+  "TIRA FOTO" : "Tirar um Foto",
+  "USAR BIBLIOTECA" : "Usuar da Biblioteca",
+  "CANCELAR" : "Cancelar",
+  "POSTAGEM" : "Postagem",
+  "PRIVADO" : "Privado",
+  "NOS PERGUNTE" : "Nos pergunte",
+
+  "INSCREVER" : "Inscrever-se",
+  "PROXIMO" : "Próximo",
+
+  "MSG_HOME" : "Que tal nos dizer sua opinião?",
+  "BEM_VINDO" : "Bem Vindo",
+
+  "LOGIN" : "Login",
+
+  "MSG_ESQUECEU_SENHA" : "Esqueceu sua senha? Clique aqui e deixe-nos ajudar."
+}

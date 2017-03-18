@@ -1,0 +1,52 @@
+{
+  "HELLO": "holaaaaaa",
+  "NOTIFICACOES": "Notificaciones",
+  "PUBLICACOES": "Publicaciones",
+  "SEGUIDORES": "Seguidores",
+  "SEGUINDO": "Siguiente",
+
+  "CONFIGURACOES" : "Ajustes",
+  "CONTA" : "Cuenta",
+  "EDITAR PERFIL" : "Editar Perfil",
+  "ALTERAR SENHA" : "Cambiar Contraseña",
+  "USUARIOS BLOQUEADO" : "Usuarios Bloqueados",
+  "IDIOMA" : "Idioma",
+  "SUPORTE" : "Titular",
+  "CENTRAL AJUDA" : "Centro de Ayuda",
+  "RELATAR PROBLEMA" : "Reportar un Problema",
+  "POLITICA" : "Política de Privacidad",
+  "TERMOS" : "Condiciones",
+  "SAIR" : "Cierre de Sesión",
+
+  "PERFIL" : "Perfil",
+  "NOME" : "Nombre",
+  "NOME USUARIO" : "Nombre de usuario",
+  "SOBRE VOCE" : "Acerca de ti",
+  "DATA NASCIMENTO" : "Fecha de nacimiento",
+  "OUTRAS INFORMACOES" : "Otras informaciones",
+  "EMAIL" : "Email",
+  "TELEFONE" : "Teléfono",
+  "SEXO" : "Sexo",
+  "MASCULINO" : "Masculino",
+  "FEMININO" : "Femenino",
+
+  "SENHA ANTIGA" : "Contraseña Antigua",
+  "NOVA SENHA" : "Nueva Contraseña",
+  "CONFIRMA SENHA" : "Confirmar Seña",
+  "SENHA" : "Seña",
+
+  "TIRA FOTO" : "Tomar la foto",
+  "USAR BIBLIOTECA" : "Uso de la biblioteca",
+  "CANCELAR" : "Cancelar",
+  "POSTAGEM" : "Publicación",
+  "PRIVADO" : "Privado",
+  "NOS PERGUNTE" : "Nos pergunte",
+
+  "INSCREVER" : "Contratar",
+  "PROXIMO" : "Próximo",
+  "MSG_HOME" : "¿Qué tal que nos indique su opinión?",
+  "BEM_VINDO" : "Bienvenido",
+
+  "LOGIN" : "Login",
+  "MSG_ESQUECEU_SENHA" : "Olvidaste tu contraseña? Haga clic aquí y vamos a ayudarle."
+}

@@ -5,7 +5,7 @@
         <ion-icon name="close"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Pergute ai =D</ion-title>
+    <ion-title>{{ 'POSTAGEM' | translate }}</ion-title>
     <ion-buttons end>
        <button ion-button icon-only (click)="onNovaPostagem(postagemForm)">
          <ion-icon name="checkmark"></ion-icon>
@@ -20,11 +20,11 @@
   <form #postagemForm="ngForm" novalidate>
 
     <ion-item>
-      <ion-textarea  [(ngModel)]="postagem.pergunta" name="pergunta" type="text" #pergunta="ngModel" placeholder="Faça um Pergunta"></ion-textarea>
+      <ion-textarea  [(ngModel)]="postagem.pergunta" name="pergunta" type="text" #pergunta="ngModel" placeholder="{{ 'NOS PERGUNTE' | translate }}"></ion-textarea>
     </ion-item>
 
     <ion-item>
-      <ion-label>Privado</ion-label>
+      <ion-label>{{ 'PRIVADO' | translate }}</ion-label>
       <ion-toggle color="color2"></ion-toggle>
     </ion-item>
 

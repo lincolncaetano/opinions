@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="color2">
-    <ion-title>Login</ion-title>
+    <ion-title>{{ 'LOGIN' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -13,16 +13,16 @@
     <ion-list style="text-align: center; margin: -1px 0 -1px 0;">
 
       <ion-item>
-        <ion-input [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="Username" required></ion-input>
+        <ion-input [(ngModel)]="usuario.username" name="username" type="text" #username="ngModel" placeholder="{{ 'NOME USUARIO' | translate }}" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" placeholder="Password" required></ion-input>
+        <ion-input [(ngModel)]="usuario.password" name="password" type="password" #password="ngModel" placeholder="{{ 'SENHA' | translate }}" required></ion-input>
       </ion-item>
 
 
       <button ion-button color="light" class="btn-login" outline (click)="onLogin(loginForm)">
-        Entrar
+        {{ 'LOGIN' | translate }}
       </button>
 
     </ion-list>
@@ -31,7 +31,7 @@
 
 
   <p [navPush]="tabsPage" style="color: white;">
-    Esqueceu sua senha? Clique aqui e deixe-nos ajudar.
+    {{ 'MSG_ESQUECEU_SENHA' | translate }}
   </p>
 
 </ion-content>

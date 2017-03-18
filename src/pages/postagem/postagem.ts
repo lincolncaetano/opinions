@@ -3,6 +3,8 @@ import { NavController, NavParams, ViewController, ModalController, ActionSheetC
 import { NgForm } from '@angular/forms';
 import { Camera } from 'ionic-native';
 
+import {TranslateService} from 'ng2-translate';
+
 import { UserData } from '../../providers/user-data';
 import { PostagemService } from '../../providers/postagem-service';
 import { CompartilharPage } from '../compartilhar/compartilhar';
@@ -30,7 +32,8 @@ export class PostagemPage {
     public modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController,
     public userData: UserData,
-    public postagemService: PostagemService) {}
+    public postagemService: PostagemService,
+    public translate: TranslateService) {}
 
   ionViewWillEnter() {
 
@@ -55,21 +58,37 @@ export class PostagemPage {
     }
   }
 
+  retornaMsg(msg){
+    let retorno;
+    this.translate.get(msg).subscribe(
+      value => {
+       retorno =  value;
+      }
+    )
+
+    return retorno;
+  }
+
   presentActionSheet(num) {
+    let tirarFoto = this.retornaMsg('TIRA FOTO');
+    let tirarBiblioteca = this.retornaMsg('USAR BIBLIOTECA');
+    let cancelar = this.retornaMsg('CANCELAR');
+
+
     let actionSheet = this.actionSheetCtrl.create({
       buttons: [
         {
-          text: 'Tirar foto',
+          text: tirarFoto,
           handler: () => {
             this.getFoto(num,Camera.PictureSourceType.CAMERA);
           }
         },{
-          text: 'Usar da biblioteca',
+          text: tirarBiblioteca,
           handler: () => {
             this.getFoto(num,Camera.PictureSourceType.PHOTOLIBRARY);
           }
         },{
-          text: 'Cancel',
+          text: cancelar,
           role: 'cancel',
           handler: () => {
             this.viewCtrl.dismiss();

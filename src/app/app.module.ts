@@ -1,7 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { TranslateModule , TranslateStaticLoader, TranslateLoader} from 'ng2-translate/ng2-translate';
+import {HttpModule, Http} from "@angular/http";
 import { Storage } from '@ionic/storage';
 import { MyApp } from './app.component';
+
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BuscaPage } from '../pages/busca/busca';
@@ -27,6 +30,9 @@ import { UsuarioService } from '../providers/usuario-service';
 import { PostagemService } from '../providers/postagem-service';
 import { NotificacaoService } from '../providers/notificacao-service';
 
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}
 
 
 @NgModule({
@@ -53,7 +59,12 @@ import { NotificacaoService } from '../providers/notificacao-service';
     ListaPostagemPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
